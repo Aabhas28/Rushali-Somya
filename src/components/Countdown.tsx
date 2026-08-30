@@ -60,8 +60,8 @@ export default function Countdown() {
             Two Souls, One Destiny
           </p>
           <p className="mx-auto mt-5 max-w-xl font-serif text-[17px] leading-relaxed text-ink2 md:text-lg">
-            Dear friends and family — join us for an evening of love, laughter
-            and unforgettable memories as we begin our forever.
+            Dear friends and family — join us for a celebration of love,
+            laughter and unforgettable memories as we begin our forever.
           </p>
           <div className="mx-auto mt-8 hairline" />
         </Reveal>

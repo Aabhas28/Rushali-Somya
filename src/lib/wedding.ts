@@ -35,12 +35,6 @@ export const EVENTS = [
     icon: "sun",
   },
   {
-    time: "29 Nov · 11:00 AM",
-    title: "Grah Shanti / Myra",
-    desc: "A traditional ceremony filled with sacred blessings and joyful family rituals.",
-    icon: "sun",
-  },
-  {
     time: "29 Nov · 03:00 PM",
     title: "Carnival",
     desc: "An afternoon of flow, dance and celebration for family and friends.",
