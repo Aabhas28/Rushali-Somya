@@ -29,9 +29,15 @@ export const EVENTS = [
     icon: "leaf",
   },
   {
-    time: "29 Nov · 09:30 AM",
+    time: "29 Nov · 09:00 AM",
     title: "Kalash ",
     desc: "A sacred morning puja inviting blessings and prosperity as the celebrations begin.",
+    icon: "sun",
+  },
+  {
+    time: "29 Nov · 11:00 AM",
+    title: "Grah Shanti / Myra",
+    desc: "A traditional ceremony filled with sacred blessings and joyful family rituals.",
     icon: "sun",
   },
   {

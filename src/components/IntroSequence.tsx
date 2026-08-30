@@ -129,15 +129,19 @@ export default function IntroSequence({
   return (
     <div
       ref={stageRef}
-      className="fixed inset-0 z-50 overflow-hidden"
+      onClick={open}
+      className="fixed inset-0 z-50 overflow-hidden cursor-pointer select-none"
       style={{
         background:
           "radial-gradient(120% 100% at 50% 40%, #f7dcd6 0%, #e7b3ac 70%, #d49a92 100%)",
       }}
     >
       <button
-        onClick={skip}
-        className="absolute right-4 top-4 z-[80] rounded-full border border-wine/40 bg-white/30 px-4 py-1.5 text-[13px] font-medium tracking-[0.2em] text-wine/80 backdrop-blur-sm transition hover:bg-white/50"
+        onClick={(e) => {
+          e.stopPropagation();
+          skip();
+        }}
+        className="absolute right-4 top-4 z-[80] rounded-full border border-wine/40 bg-white/30 px-4 py-1.5 text-[13px] font-medium tracking-[0.2em] text-wine/80 backdrop-blur-sm transition hover:bg-white/50 cursor-pointer"
       >
         SKIP
       </button>
@@ -261,7 +265,7 @@ export default function IntroSequence({
       >
         <div className="mx-auto mb-3 hairline" />
         <p className="text-[13px] font-medium tracking-[0.3em] text-wine/90">
-          CLICK TO OPEN
+          TAP ANYWHERE TO OPEN
         </p>
         <div className="mx-auto mt-3 hairline" />
       </div>
