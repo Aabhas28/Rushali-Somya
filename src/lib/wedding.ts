@@ -30,8 +30,14 @@ export const EVENTS = [
   },
   {
     time: "29 Nov · 09:00 AM",
-    title: "Kalash ",
+    title: "Kalash",
     desc: "A sacred morning puja inviting blessings and prosperity as the celebrations begin.",
+    icon: "sun",
+  },
+  {
+    time: "29 Nov · 11:30 AM",
+    title: "Grah Shanti/Myra",
+    desc: "A sacred celebration of blessings, family traditions and joyful moments with loved ones.",
     icon: "sun",
   },
   {
@@ -48,7 +54,7 @@ export const EVENTS = [
   },
 
   {
-    time: "30 Nov · 12:00 AM",
+    time: "30 Nov · 12:15 PM",
     title: "Wedding",
     desc: "Two souls, one vow — by the pool.",
     icon: "rings",
@@ -56,7 +62,7 @@ export const EVENTS = [
   {
     time: "30 Nov · 07:30 PM",
     title: "Reception",
-    desc: "Dinner, fireworks and the first dance.",
+    desc: "An evening of celebration, music, delicious food and cherished moments with loved ones.",
     icon: "glass",
   },
 ];
