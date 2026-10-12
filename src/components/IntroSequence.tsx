@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { WEDDING } from "@/lib/wedding";
 
@@ -33,16 +33,21 @@ export default function IntroSequence({
   const sealRef = useRef<HTMLButtonElement>(null);
   const hintRef = useRef<HTMLDivElement>(null);
 
-  const [opened, setOpened] = useState(false);
+  const opened = useRef(false);
+  const finished = useRef(false);
 
   const finish = () => {
-    onComplete();
+    if (finished.current) return;
+    finished.current = true;
+
     const lenis = (window as unknown as { __lenis?: { start: () => void } })
       .__lenis;
     lenis?.start();
+    onComplete();
   };
 
   const skip = () => {
+    opened.current = true;
     finish();
     gsap.to(stageRef.current, {
       autoAlpha: 0,
@@ -53,9 +58,9 @@ export default function IntroSequence({
     });
   };
 
-  const open = () => {
-    if (opened) return;
-    setOpened(true);
+  const open = useCallback(() => {
+    if (opened.current) return;
+    opened.current = true;
 
     const exit = "power2.in"; // accelerate as the paper leaves the frame
     const tl = gsap.timeline();
@@ -97,7 +102,7 @@ export default function IntroSequence({
         "<"
       )
       .set(stageRef.current, { display: "none" });
-  };
+  }, []);
 
   useEffect(() => {
     // gentle entrance for the sealed, fully-closed envelope
@@ -107,6 +112,11 @@ export default function IntroSequence({
       { autoAlpha: 1, scale: 1, duration: 1.2, ease: "power3.out" }
     );
   }, []);
+
+  useEffect(() => {
+    const timeout = window.setTimeout(open, 2000);
+    return () => window.clearTimeout(timeout);
+  }, [open]);
 
   // each flap = a full-screen layer showing its flap PNG (cover/centre, so all
   // four align perfectly and reconstruct the closed envelope)
