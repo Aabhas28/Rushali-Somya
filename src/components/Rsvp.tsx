@@ -3,8 +3,7 @@ import FloralCorner from "./FloralCorner";
 import { WEDDING } from "@/lib/wedding";
 
 const RSVP_CONTACTS = [
-  { name: "Budhraj Bohra", phone: "+91 98291 20699" },
-  { name: "Akash - Sunita Bohra", phone: "+91 98280 78781" },
+  { name: "Praveen - Sapna Parakh", phone: "+91 9414115928" },
 ];
 
 const qrCodeSrc = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=12&data=${encodeURIComponent(
@@ -51,7 +50,7 @@ export default function Rsvp() {
           </div>
 
           <h3 className="script gold-shimmer" style={{ fontSize: "clamp(2rem, 8vw, 3rem)" }}>
-            Bohra Family
+            Parakh Family
           </h3>
           <p className="mt-2 font-serif text-base italic text-ink2 sm:text-lg">
             Awaits Your Presence
