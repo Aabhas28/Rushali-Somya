@@ -17,17 +17,17 @@ export const WEDDING = {
   mapsUrl:
     "https://maps.google.com/?q=" +
     encodeURIComponent(
-      "Orica Resort, 200 Feet Ring Road, near Hanuman Circle, Eras, Bhilwara, Rajasthan 311001"
+      "Orica Resort, 200 Feet Ring Road, near Hanuman Circle, Eras, Bhilwara, Rajasthan 311001",
     ),
 };
 
 export const EVENTS = [
-  {
-    time: "28 Nov · 7:00 PM",
-    title: "Neon Night",
-    desc: "Step into a world of vibrant colors and electrifying energy at our Neon Night!",
-    icon: "leaf",
-  },
+  // {
+  //   time: "28 Nov · 7:00 PM",
+  //   title: "Neon Night",
+  //   desc: "Step into a world of vibrant colors and electrifying energy at our Neon Night!",
+  //   icon: "leaf",
+  // },
   {
     time: "29 Nov · 09:00 AM",
     title: "Kalash",
