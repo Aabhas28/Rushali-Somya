@@ -9,6 +9,7 @@ import Timeline from "@/components/Timeline";
 import Gallery from "@/components/Gallery";
 import Rsvp from "@/components/Rsvp";
 import Petals from "@/components/Petals";
+import AutoScroll from "@/components/AutoScroll";
 import { WEDDING } from "@/lib/wedding";
 
 export default function Home() {
@@ -39,6 +40,9 @@ export default function Home() {
 
       {/* global falling rose petals */}
       <Petals />
+
+      {/* auto-scroll control bar for guests unfamiliar with scrolling */}
+      <AutoScroll introDone={introDone} />
 
       {/* opening cinematic — stays mounted so it can fade OVER the hero's bloom
           (it self-hides via display:none at the end of its own timeline) */}

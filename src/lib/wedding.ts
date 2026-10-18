@@ -15,7 +15,7 @@ export const WEDDING = {
   address:
     "200 Feet Ring Road, near Hanuman Circle, Eras, Bhilwara, Rajasthan 311001",
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=" +
+    "https://maps.google.com/?q=" +
     encodeURIComponent(
       "Orica Resort, 200 Feet Ring Road, near Hanuman Circle, Eras, Bhilwara, Rajasthan 311001"
     ),
